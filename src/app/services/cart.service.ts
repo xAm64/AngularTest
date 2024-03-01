@@ -5,12 +5,23 @@ import { Training } from '../models/training.models';
   providedIn: 'root'
 })
 export class CartService {
+  listArticles:Training[];
+  constructor() {
+    this.listArticles = [];
+  }
 
-  constructor() { }
+  //ajoute un élément au panier
+  addToCart(training:Training){
+    this.listArticles.push(training);
 
-  addTraining(training:Training){
-    console.log(training.name);
-    console.log(training.quantity);
+    //l'ancienne méthode pour voir que j'ajoutais bien X article en Y quantité.
+    /*console.log(training.name);
+    console.log(training.quantity);*/
+  }
+
+  //consulter le panier
+  getCart(){
+    return this.listArticles;
   }
 
 }

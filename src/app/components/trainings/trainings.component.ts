@@ -20,7 +20,8 @@ export class TrainingsComponent implements OnInit {
   }
 
   onAddToCart(training:Training){
-    this.cartService.addTraining(training);
+    this.cartService.addToCart(training);
   }
+  
 
 }
