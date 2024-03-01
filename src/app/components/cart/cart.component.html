@@ -8,6 +8,7 @@
                     <th>Description</th>
                     <th>Quantité</th>
                     <th>Prix unitaire</th>
+                    <th>sous-total</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +18,7 @@
                     <td>{{training.description}}</td>
                     <td>{{training.quantity}}</td>
                     <td>{{training.price}}</td>
+                    <td>{{training.quantity * training.price}}</td>
                 </tr>
             </tbody>
         </table>
