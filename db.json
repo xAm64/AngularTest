@@ -1,0 +1,39 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "name": "java",
+      "description": "Formation Java SE8 sur 5 jours",
+      "price": 1500,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "DotNet",
+      "description": "Formation DotNet sur 3 jours",
+      "price": 1000,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Python",
+      "description": "Formation Python/Django 5jours",
+      "price": 1500,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Php",
+      "description": "Initiation au Dev/web avec Php 4jours",
+      "price": 1300,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "NodeJs",
+      "description": "Prise en main de NideJs/Express 2jours",
+      "price": 1400,
+      "quantity": 1
+    }
+  ]
+}

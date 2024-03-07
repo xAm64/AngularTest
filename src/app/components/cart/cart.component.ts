@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Training } from 'src/app/models/training.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -8,21 +9,20 @@ import { Training } from 'src/app/models/training.models';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  trainings: Training[] | undefined;
-  constructor(private cartService: CartService) {
+  cart:Training[] | undefined;
+  amount: number = 0;
+  constructor(private cartService: CartService, private router: Router) {
   }
   
   ngOnInit(): void {
-    this.trainings = this.cartService.getCart();
+    this.cart = this.cartService.getCart();
+    this.amount = this.cartService.getAmount();
   }
-
-  //cout total
-  totalCost(){
-    let total = 0;
-    this.trainings?.forEach((art) => {
-      total += art.price * art.quantity
-    });
-    return total;
+  onRemoveFromCart(training:Training){
+    this.cartService.removeTraining(training);
+    this.cart = this.cartService.getCart();
   }
-  //ajouter ici la méthode delete pour enlever les articles.
+  onNewOrder(){
+    this.router.navigateByUrl("customer");
+  }
 }
