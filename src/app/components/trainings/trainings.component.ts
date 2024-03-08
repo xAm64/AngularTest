@@ -30,7 +30,7 @@ export class TrainingsComponent implements OnInit {
       next : (data) => this.listTrainings = data,
       error : (err) => this.error = err.message,
       complete : () => this.error = null
-    })
+    });
   }
 
 }
