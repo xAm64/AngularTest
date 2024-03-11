@@ -27,7 +27,7 @@ export class UserComponent implements OnInit {
 
   login(form:FormGroup) : void {
     this.apiService.loginUser(form.value.email, form.value.passowrd).subscribe({
-      next: (data) => console.log(data), //this.user = data,
+      next: (data) => console.log(data),  //this.user = data,
       error : (err) => this.error = err.message,
       complete: () => this.error = null
     });
